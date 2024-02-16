@@ -28,9 +28,11 @@ class Record:
         self.phones.append(Phone(phone))
         return "Phone added."
 
-    # def remove_phone(self, phone):
-    #     selff.phones = 
-    #     return "Phone deleted."
+    def remove_phone(self, phone):
+        for i in range(len(self.phones)):
+            if i == phone:
+                self.phones.pop(i)
+        return "Phone deleted."
 
     def edit_phone(self, old_phone, new_phone):
         for phone in self.phones:
